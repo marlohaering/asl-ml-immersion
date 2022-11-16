@@ -32,7 +32,7 @@ steps:
   - 'TRAINING_CONTAINER_IMAGE_URI=gcr.io/$PROJECT_ID/trainer_image_covertype_vertex:latest'
   - 'TRAINING_FILE_PATH=gs://$PROJECT_ID-kfp-artifact-store/data/training/dataset.csv'
   - 'VALIDATION_FILE_PATH=gs://$PROJECT_ID-kfp-artifact-store/data/validation/dataset.csv'
-  dir: pipeline_vertex
+  dir: $_PIPELINE_FOLDER/pipeline_vertex
   
 # Run the pipeline
 - name: 'gcr.io/$PROJECT_ID/kfp-cli-vertex'
